@@ -1,37 +1,65 @@
 /* styles.css */
 /* Tara Wilson - styles.css */
 
+/* Basic reset for margins and padding */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4; /* Light grey background */
+}
+
+/* Navigation bar styles */
+nav {
+    background-color: #333; /* Dark background for the nav */
+    color: white;
+    padding: 10px 0;
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
+    text-align: center;
 }
 
 nav ul li {
     display: inline;
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
+nav ul li a {
+    color: white; /* White text for nav links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Heading styles */
 h1 {
-    color: #333;
+    color: #333; /* Dark grey color for headings */
+    text-align: center;
+    padding: 20px 0;
 }
 
+/* Paragraph styles */
 p {
     font-size: 16px;
+    color: #666; /* Medium grey color for text */
+    margin: 0 20px;
 }
 
+/* Table styles */
 table {
     width: 100%;
     border-collapse: collapse;
+    margin: 20px 0;
 }
 
 table, th, td {
-    border: 1px solid black;
+    border: 1px solid #ddd; /* Light grey border for table */
 }
 
 th, td {
@@ -39,31 +67,17 @@ th, td {
     text-align: left;
 }
 
-/* styles.css */
+th {
+    background-color: #f2f2f2; /* Light grey background for table headers */
+}
+
+/* Image styles */
 img {
     width: 300px; 
     height: auto; 
     border-radius: 8px; 
     margin: 10px; 
     display: block; 
-}
-
-
-@media (max-width: 600px) {
-    body {
-        background-color: #b1f386;
-    }
-    nav ul li {
-        display: block;
-        margin-bottom: 10px;
-    }
-}
-
-
-/* Basic reset for margins and padding */
-body {
-    margin: 0;
-    padding: 0;
 }
 
 /* Container for the image grid */
@@ -73,6 +87,9 @@ body {
     gap: 10px; /* Space between items */
     padding: 10px; /* Padding around the grid */
     box-sizing: border-box; 
+    background-color: #fff; /* White background for the image grid */
+    border: 1px solid #ddd; /* Light grey border around the grid */
+    border-radius: 8px; 
 }
 
 /* Each image item */
@@ -81,6 +98,7 @@ body {
     box-sizing: border-box;
 }
 
+/* Responsive design for images */
 .image-item img {
     width: 100%; 
     height: auto; 
@@ -88,8 +106,19 @@ body {
 }
 
 /* Responsive design */
+@media (max-width: 600px) {
+    body {
+        background-color: #b1f386; /* Light green background for small screens */
+    }
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+/* Responsive design for image grid */
 @media screen and (max-width: 768px) {
     .image-item {
-        flex: 1 1 100%; /* 100% width on smaller screens */
+        flex: 1 1 100%; 
     }
 }
