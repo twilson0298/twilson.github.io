@@ -38,3 +38,47 @@ th, td {
     padding: 10px;
     text-align: left;
 }
+@media (max-width: 600px) {
+    body {
+        background-color: #b1f386;
+    }
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+
+/* Basic reset for margins and padding */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for the image grid */
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Space between items */
+    padding: 10px; /* Padding around the grid */
+    box-sizing: border-box; 
+}
+
+/* Each image item */
+.image-item {
+    flex: 1 1 calc(50% - 20px); /* 50% width minus gap to account for spacing */
+    box-sizing: border-box;
+}
+
+.image-item img {
+    width: 100%; 
+    height: auto; 
+    display: block; 
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .image-item {
+        flex: 1 1 100%; /* 100% width on smaller screens */
+    }
+}
