@@ -20,10 +20,12 @@ nav ul {
     list-style-type: none;
     padding: 0;
     text-align: center;
+    margin: 0;
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block;
+    position: relative; /* Needed for dropdown positioning */
     margin-right: 20px;
 }
 
@@ -31,10 +33,46 @@ nav ul li a {
     color: white; /* White text for nav links */
     text-decoration: none;
     font-weight: bold;
+    display: block;
+    padding: 10px 15px;
 }
 
 nav ul li a:hover {
     text-decoration: underline; /* Underline on hover */
+}
+
+/* Dropdown menu styles */
+.dropdown:hover .dropdown-menu {
+    display: block; /* Show the dropdown on hover */
+}
+
+.dropdown-menu {
+    display: none; /* Hide dropdown menu by default */
+    position: absolute;
+    top: 100%; /* Position below the dropdown item */
+    left: 0;
+    background-color: #444; /* Slightly lighter background for dropdown */
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+.dropdown-menu li {
+    display: block;
+}
+
+.dropdown-menu li a {
+    color: white;
+    padding: 10px 15px;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #555; /* Darker background on hover */
 }
 
 /* Heading styles */
@@ -89,7 +127,7 @@ img {
     box-sizing: border-box; 
     background-color: #fff; /* White background for the image grid */
     border: 1px solid #ddd; /* Light grey border around the grid */
-    border-radius: 8px; 
+    border-radius: 8px; /* Rounded corners for the grid */
 }
 
 /* Each image item */
@@ -119,6 +157,6 @@ img {
 /* Responsive design for image grid */
 @media screen and (max-width: 768px) {
     .image-item {
-        flex: 1 1 100%; 
+        flex: 1 1 100%; /* 100% width on smaller screens */
     }
 }
