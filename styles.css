@@ -49,3 +49,16 @@ th, td {
     }
 }
 
+    <div class="image-grid">
+        <div class="image-item">
+            <img src="C:\Users\wilso\OneDrive\Desktop\final_webpage\image1.webp" alt="flowers">
+        </div>
+        <div class="image-item">
+            <img src="C:\Users\wilso\OneDrive\Desktop\final_webpage\image3.webp" alt="purple">
+        </div>
+        <div class="image-item">
+            <img src="C:\Users\wilso\OneDrive\Desktop\final_webpage\image4.webp" alt="purple flowers">
+        </div>
+        <div class="image-item">
+            <img src="C:\Users\wilso\OneDrive\Desktop\final_webpage\image2.webp" alt="colorful">
+        </div>
