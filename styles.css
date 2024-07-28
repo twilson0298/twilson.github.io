@@ -38,3 +38,14 @@ th, td {
     padding: 10px;
     text-align: left;
 }
+
+@media (max-width: 600px) {
+    body {
+        background-color: #b1f386;
+    }
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
